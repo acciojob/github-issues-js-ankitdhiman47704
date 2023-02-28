@@ -15,7 +15,7 @@ function nextPage(){
     dataDiv.innerHTML = ""
     document.getElementById("load_prev").disabled = false
     pageNumber++;
-    showPage.innerText = pageNumber
+    showPage.innerText =`Page number ${pageNumber}` 
     fetchData(pageNumber);
 }
 function prevPage(){
@@ -26,7 +26,7 @@ function prevPage(){
         document.getElementById("load_prev").disabled = false
     }
         pageNumber--;
-        showPage.innerText = pageNumber
+        showPage.innerText =`Page number ${pageNumber}` 
         fetchData(pageNumber);
       
 }
