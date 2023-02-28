@@ -13,21 +13,17 @@ async function fetchData(pageNum){
 } 
 function nextPage(){
     dataDiv.innerHTML = ""
-    document.getElementById("load_prev").disabled = false
     pageNumber++;
-    showPage.innerText =`Page number ${pageNumber}` 
+   showPage.innerText =`Page number ${pageNumber}` 
     fetchData(pageNumber);
 }
 function prevPage(){
-    dataDiv.innerHTML = ""
-    if(pageNumber==2){
-        document.getElementById("load_prev").disabled = true
-    }else{
-        document.getElementById("load_prev").disabled = false
-    }
+    if(pageNumber>=2){
+        dataDiv.innerHTML = ""
         pageNumber--;
         showPage.innerText =`Page number ${pageNumber}` 
         fetchData(pageNumber);
+    }
       
 }
 fetchData(1)
